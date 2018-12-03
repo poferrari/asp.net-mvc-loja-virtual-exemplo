@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using LojaVirtual.BLL.Departamentos;
-using LojaVirtual.BLL.Departamentos.Dto;
+using LojaVirtual.BLL.Departamentos.Dtos;
 
 namespace LojaVirtual.Infra.Configuracoes
 {

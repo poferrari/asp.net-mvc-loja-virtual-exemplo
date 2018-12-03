@@ -1,4 +1,4 @@
-﻿using LojaVirtual.BLL.Departamentos.Dto;
+﻿using LojaVirtual.BLL.Departamentos.Dtos;
 
 namespace LojaVirtual.BLL.Departamentos
 {

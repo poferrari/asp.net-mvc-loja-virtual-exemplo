@@ -1,7 +1,7 @@
 ﻿using LojaVirtual.Resources;
 using System.ComponentModel.DataAnnotations;
 
-namespace LojaVirtual.BLL.Departamentos.Dto
+namespace LojaVirtual.BLL.Departamentos.Dtos
 {
     public class DepartamentoDto
     {

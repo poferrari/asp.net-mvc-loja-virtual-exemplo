@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculadora\Calculadora.cs" />
-    <Compile Include="Departamentos\Dto\DepartamentoDto.cs" />
+    <Compile Include="Departamentos\Dtos\DepartamentoDto.cs" />
     <Compile Include="Departamentos\IDepartamentoRepositorio.cs" />
     <Compile Include="Departamentos\IPersistirDepartamento.cs" />
     <Compile Include="Departamentos\IRemocaoDeDepartamento.cs" />
