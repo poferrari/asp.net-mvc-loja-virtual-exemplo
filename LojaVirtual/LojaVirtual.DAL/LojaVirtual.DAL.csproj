@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7920C1B6-3C1D-4E72-B87D-9CA4A613FC12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LojaVirtual.DAL</RootNamespace>
+    <AssemblyName>LojaVirtual.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contexto\LojaVirtualContexto.cs" />
+    <Compile Include="Contexto\Mapeamento\DepartamentoDoProdutoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\DepartamentoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\EnderecoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\ImagemDoProdutoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\ItemDoPedidoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\MunicipioMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\PedidoEnderecoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\PedidoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\PessoaFisicaMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\PessoaJuridicaMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\PessoaMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\ProdutoMapeamento.cs" />
+    <Compile Include="Contexto\Mapeamento\UFMapeamento.cs" />
+    <Compile Include="Migrations\201812031551464_InicializarBanco.cs" />
+    <Compile Include="Migrations\201812031551464_InicializarBanco.Designer.cs">
+      <DependentUpon>201812031551464_InicializarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812031711145_AtribuirUniqueEmaileUF.cs" />
+    <Compile Include="Migrations\201812031711145_AtribuirUniqueEmaileUF.Designer.cs">
+      <DependentUpon>201812031711145_AtribuirUniqueEmaileUF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\MunicipioRepositorio.cs" />
+    <Compile Include="Repositorios\PessoaRepositorio.cs" />
+    <Compile Include="Repositorios\UFRepositorio.cs" />
+    <Compile Include="_Base\RepositorioBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LojaVirtual.BLL\LojaVirtual.BLL.csproj">
+      <Project>{47df4dea-329d-4c0c-8526-b94d7e647068}</Project>
+      <Name>LojaVirtual.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LojaVirtual.Resources\LojaVirtual.Resources.csproj">
+      <Project>{26cecf7a-20b9-4fa7-8344-12fdc247192e}</Project>
+      <Name>LojaVirtual.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Consultas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812031551464_InicializarBanco.resx">
+      <DependentUpon>201812031551464_InicializarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812031711145_AtribuirUniqueEmaileUF.resx">
+      <DependentUpon>201812031711145_AtribuirUniqueEmaileUF.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

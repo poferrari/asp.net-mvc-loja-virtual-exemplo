@@ -1,0 +1,8 @@
+﻿@using LojaVirtual.BLL.Municipios.Dtos
+
+@{
+    List<UFDto> ufs = ViewBag.Ufs;
+    var selectUf = new SelectList(ufs, "Id", "Sigla");
+}
+
+@Html.DropDownListFor(model => model, selectUf, "[Selecione]", new { @class = "form-control" })

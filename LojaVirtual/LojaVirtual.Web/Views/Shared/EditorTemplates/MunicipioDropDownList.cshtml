@@ -1,0 +1,8 @@
+﻿@using LojaVirtual.BLL.Municipios.Dtos
+
+@{
+    var municipios = ViewBag.Municipios as List<MunicipioDto>;
+    var selectMunicipio = new SelectList(municipios, "Id", "Nome");
+}
+
+@Html.DropDownListFor(model => model, selectMunicipio, "[Selecione]", new { @class = "form-control" })
