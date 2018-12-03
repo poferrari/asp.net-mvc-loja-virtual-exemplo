@@ -1,5 +1,5 @@
 ﻿using LojaVirtual.BLL._Base;
-using LojaVirtual.BLL.CategoriasDeProduto;
+using LojaVirtual.BLL.Departamentos;
 
 namespace LojaVirtual.BLL.Produtos
 {

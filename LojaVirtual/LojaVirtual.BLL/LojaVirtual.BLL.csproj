@@ -64,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculadora\Calculadora.cs" />
+    <Compile Include="Departamentos\Dto\DepartamentoDto.cs" />
+    <Compile Include="Departamentos\IDepartamentoRepositorio.cs" />
+    <Compile Include="Departamentos\IPersistirDepartamento.cs" />
+    <Compile Include="Departamentos\IRemocaoDeDepartamento.cs" />
+    <Compile Include="Departamentos\PersistirDepartamento.cs" />
+    <Compile Include="Departamentos\RemocaoDeDepartamento.cs" />
     <Compile Include="Municipios\Dtos\MunicipioDto.cs" />
     <Compile Include="Municipios\Dtos\UFDto.cs" />
     <Compile Include="Municipios\IMunicipioRepositorio.cs" />

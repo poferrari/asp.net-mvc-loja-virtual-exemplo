@@ -1,4 +1,4 @@
-﻿using LojaVirtual.BLL.CategoriasDeProduto;
+﻿using LojaVirtual.BLL.Departamentos;
 using LojaVirtual.BLL.Municipios;
 using LojaVirtual.BLL.Pedidos;
 using LojaVirtual.BLL.Pessoas;

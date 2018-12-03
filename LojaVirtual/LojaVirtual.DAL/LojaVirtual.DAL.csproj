@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\DepartamentoRepositorio.cs" />
     <Compile Include="Repositorios\MunicipioRepositorio.cs" />
     <Compile Include="Repositorios\PessoaRepositorio.cs" />
     <Compile Include="Repositorios\UFRepositorio.cs" />

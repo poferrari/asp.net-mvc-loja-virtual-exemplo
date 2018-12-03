@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.DAL", "LojaVirt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.Resources", "LojaVirtual.Resources\LojaVirtual.Resources.csproj", "{26CECF7A-20B9-4FA7-8344-12FDC247192E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaVirtual.Infra", "LojaVirtual.Infra\LojaVirtual.Infra.csproj", "{321B2BA0-6AB8-4642-96B6-89926501E9DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{26CECF7A-20B9-4FA7-8344-12FDC247192E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26CECF7A-20B9-4FA7-8344-12FDC247192E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26CECF7A-20B9-4FA7-8344-12FDC247192E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321B2BA0-6AB8-4642-96B6-89926501E9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321B2BA0-6AB8-4642-96B6-89926501E9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321B2BA0-6AB8-4642-96B6-89926501E9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321B2BA0-6AB8-4642-96B6-89926501E9DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{47DF4DEA-329D-4C0C-8526-B94D7E647068} = {35B7C4B4-6ACF-4864-B7C7-22AAD851FE68}
 		{7920C1B6-3C1D-4E72-B87D-9CA4A613FC12} = {35B7C4B4-6ACF-4864-B7C7-22AAD851FE68}
 		{26CECF7A-20B9-4FA7-8344-12FDC247192E} = {35B7C4B4-6ACF-4864-B7C7-22AAD851FE68}
+		{321B2BA0-6AB8-4642-96B6-89926501E9DD} = {35B7C4B4-6ACF-4864-B7C7-22AAD851FE68}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {84561529-B85A-477C-AD67-82071812E55F}

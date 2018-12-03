@@ -1,4 +1,4 @@
-﻿using LojaVirtual.BLL.CategoriasDeProduto;
+﻿using LojaVirtual.BLL.Departamentos;
 using LojaVirtual.Resources;
 using System.Data.Entity.ModelConfiguration;
 

@@ -1,3 +1,4 @@
+using LojaVirtual.BLL.Departamentos;
 using LojaVirtual.BLL.Municipios;
 using LojaVirtual.BLL.Pessoas;
 using LojaVirtual.DAL.Contexto;
@@ -50,6 +51,10 @@ namespace LojaVirtual.Web
             container.RegisterType<IPessoaRepositorio, PessoaRepositorio>(new HierarchicalLifetimeManager());
             container.RegisterType<IUFRepositorio, UFRepositorio>(new HierarchicalLifetimeManager());
             container.RegisterType<IMunicipioRepositorio, MunicipioRepositorio>(new HierarchicalLifetimeManager());
+
+            container.RegisterType<IDepartamentoRepositorio, DepartamentoRepositorio>(new HierarchicalLifetimeManager());
+            container.RegisterType<IPersistirDepartamento, PersistirDepartamento>(new HierarchicalLifetimeManager());
+            container.RegisterType<IRemocaoDeDepartamento, RemocaoDeDepartamento>(new HierarchicalLifetimeManager());
         }
     }
 }

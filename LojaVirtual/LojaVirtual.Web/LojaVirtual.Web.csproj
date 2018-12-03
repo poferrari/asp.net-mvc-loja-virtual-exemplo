@@ -43,14 +43,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.8.11\lib\net46\CommonServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -85,6 +88,9 @@
     </Reference>
     <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -178,6 +184,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Controllers\DepartamentosController.cs" />
     <Compile Include="Controllers\DownloadController.cs" />
     <Compile Include="Controllers\EnderecosController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
@@ -209,6 +216,8 @@
     <Content Include="Views\Upload\UploadFile.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\UFDropDownList.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\MunicipioDropDownList.cshtml" />
+    <Content Include="Views\Departamentos\Index.cshtml" />
+    <Content Include="Views\Departamentos\Cadastro.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -231,6 +240,10 @@
     <ProjectReference Include="..\LojaVirtual.DAL\LojaVirtual.DAL.csproj">
       <Project>{7920c1b6-3c1d-4e72-b87d-9ca4a613fc12}</Project>
       <Name>LojaVirtual.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LojaVirtual.Infra\LojaVirtual.Infra.csproj">
+      <Project>{321b2ba0-6ab8-4642-96b6-89926501e9dd}</Project>
+      <Name>LojaVirtual.Infra</Name>
     </ProjectReference>
     <ProjectReference Include="..\LojaVirtual.Resources\LojaVirtual.Resources.csproj">
       <Project>{26cecf7a-20b9-4fa7-8344-12fdc247192e}</Project>

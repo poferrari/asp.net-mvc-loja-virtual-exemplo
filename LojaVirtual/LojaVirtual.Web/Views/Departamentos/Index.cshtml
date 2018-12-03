@@ -1,0 +1,39 @@
+﻿@using LojaVirtual.BLL.Departamentos
+@model List<Departamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nova categoria", "Cadastro")
+</p>
+
+<hr />
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Opções</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Nome
+            </td>
+            <td>
+                @Html.DisplayFor(t => item.Descricao)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Cadastro", new { id = item.Id })
+                @Html.ActionLink("Remover", "Remocao", new { id = item.Id }, new { onclick = "return confirm('Deseja realmente remover?')" })
+            </td>
+        </tr>
+    }
+</table>
+
