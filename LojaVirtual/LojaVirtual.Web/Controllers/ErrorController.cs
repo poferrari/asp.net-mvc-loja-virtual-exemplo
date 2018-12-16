@@ -22,7 +22,7 @@ namespace LojaVirtual.Web.Controllers
         {
             ViewBag.AlertaErro = "Acesso Negado :(";
             ViewBag.MensagemErro = "Você não tem permissão para executar isso";
-            return PartialView("Index");
+            return View("Index");
         }
     }
 }

@@ -11,6 +11,14 @@ namespace LojaVirtual.BLL.Pedidos
         public decimal Valor { get; private set; }
         public int Quantidade { get; private set; }
 
+        public ItemDoPedido(int produtoId, string nomeProduto, decimal valor, int quantidade)
+        {
+            ProdutoId = produtoId;
+            NomeProduto = nomeProduto;
+            Valor = valor;
+            Quantidade = quantidade;
+        }
+
         public virtual Produto Produto { get; private set; }
         public virtual Pedido Pedido { get; private set; }
     }

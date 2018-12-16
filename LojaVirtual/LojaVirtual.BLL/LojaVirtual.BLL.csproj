@@ -76,8 +76,13 @@
     <Compile Include="Municipios\IUFRepositorio.cs" />
     <Compile Include="Municipios\Municipio.cs" />
     <Compile Include="Municipios\UF.cs" />
+    <Compile Include="Pedidos\Dto\ItemDoPedidoDto.cs" />
+    <Compile Include="Pedidos\Dto\PedidoDto.cs" />
     <Compile Include="Pedidos\Enums\ESituacaoDoPedido.cs" />
+    <Compile Include="Pedidos\IPedidoRepositorio.cs" />
+    <Compile Include="Pedidos\IPersistirPedido.cs" />
     <Compile Include="Pedidos\ItemDoPedido.cs" />
+    <Compile Include="Pedidos\PersistirPedido.cs" />
     <Compile Include="Pessoas\ArmazenadorDePessoa.cs" />
     <Compile Include="Pessoas\Dto\PessoaDto.cs" />
     <Compile Include="Pessoas\Enderecos\Endereco.cs" />
@@ -88,14 +93,18 @@
     <Compile Include="Pessoas\IPessoaRepositorio.cs" />
     <Compile Include="Departamentos\Departamento.cs" />
     <Compile Include="Pedidos\Pedido.cs" />
+    <Compile Include="Produtos\AtualizarEstoqueDoProduto.cs" />
     <Compile Include="Produtos\DepartamentoDoProduto.cs" />
+    <Compile Include="Produtos\IAtualizarEstoqueDoProduto.cs" />
     <Compile Include="Produtos\ImagemDoProduto.cs" />
+    <Compile Include="Produtos\IProdutoRepositorio.cs" />
     <Compile Include="Produtos\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_Atributos\CustomValidationCNPJAttribute.cs" />
     <Compile Include="_Atributos\CustomValidationCPFAttribute.cs" />
     <Compile Include="_Base\EntidadeBase.cs" />
     <Compile Include="_Base\IRepositorioBase.cs" />
+    <Compile Include="_Base\IUnitOfWork.cs" />
     <Compile Include="_Utilitario\Util.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Pessoas\PessoasFisicas\Dto\" />
+    <Folder Include="Produtos\Dto\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

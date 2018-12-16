@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/tabela.css" rel="stylesheet" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     @RenderSection("HeadStyleContent", required: false)
 </head>
@@ -21,7 +22,9 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav"></ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Departamentos", "Index", "Departamentos")</li>
+                </ul>                
             </div>
         </div>
     </div>

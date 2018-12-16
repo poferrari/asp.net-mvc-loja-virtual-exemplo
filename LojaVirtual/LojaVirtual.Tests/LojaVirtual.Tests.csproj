@@ -89,6 +89,7 @@
     <Compile Include="CalculadoraTest.cs" />
     <Compile Include="Departamentos\DepartamentoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -102,6 +103,14 @@
     <ProjectReference Include="..\LojaVirtual.DAL\LojaVirtual.DAL.csproj">
       <Project>{7920c1b6-3c1d-4e72-b87d-9ca4a613fc12}</Project>
       <Name>LojaVirtual.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LojaVirtual.Infra\LojaVirtual.Infra.csproj">
+      <Project>{321b2ba0-6ab8-4642-96b6-89926501e9dd}</Project>
+      <Name>LojaVirtual.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LojaVirtual.Resources\LojaVirtual.Resources.csproj">
+      <Project>{26cecf7a-20b9-4fa7-8344-12fdc247192e}</Project>
+      <Name>LojaVirtual.Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\LojaVirtual.Web\LojaVirtual.Web.csproj">
       <Project>{67732771-65BE-4F25-B8EC-6B76F49D549F}</Project>

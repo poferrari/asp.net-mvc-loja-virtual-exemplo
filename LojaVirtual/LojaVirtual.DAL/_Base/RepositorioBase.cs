@@ -1,6 +1,7 @@
 ﻿using LojaVirtual.BLL._Base;
 using LojaVirtual.DAL.Contexto;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
@@ -34,6 +35,22 @@ namespace LojaVirtual.DAL._Base
         public void SalvarTodos()
         {
             _ctx.SaveChanges();
+        }
+
+        public IEnumerable<string> ObterErros()
+        {
+            var erros = new List<string>();
+            var validacoes = _ctx.GetValidationErrors();
+            if (validacoes == null || !validacoes.Any())
+                return erros;
+            foreach (var erro in validacoes)
+            {
+                if (erro == null)
+                    continue;
+                erros.AddRange(erro.ValidationErrors
+                        .Select(t => $"{erro.Entry.Entity.ToString()}: {t.ErrorMessage}".Trim()).ToList());
+            }
+            return erros;
         }
 
         public void Adicionar(TEntity obj)

@@ -10,6 +10,7 @@
 {
     <script type="text/javascript">
         $(function () {
+
             $('#CPF').mask('999.999.999.99');
             $('#Celular').mask('(99) 9999-9999?9');
             $('#CEP').mask('99999-999');
@@ -27,7 +28,7 @@
                     async: true,
                     success: function (data) {
                         $('#MunicipioId').html('');
-                        $('#MunicipioId').append($('<option></option>').val(null).html("[Selecione]"));
+                        $('#MunicipioId').append($('<option></option>').val(null).html('[Selecione]'));
                         $.each(data, function (index) {
                             $('#MunicipioId').append($('<option></option>').val(data[index].Id).html(data[index].Nome));
                         });                        

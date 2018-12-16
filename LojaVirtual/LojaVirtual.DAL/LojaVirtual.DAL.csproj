@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.1.50.5\lib\net451\Dapper.Contrib.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -40,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto\LojaVirtualContexto.cs" />
+    <Compile Include="Contexto\Mapeamento\CalculadoraMapeamento.cs" />
     <Compile Include="Contexto\Mapeamento\DepartamentoDoProdutoMapeamento.cs" />
     <Compile Include="Contexto\Mapeamento\DepartamentoMapeamento.cs" />
     <Compile Include="Contexto\Mapeamento\EnderecoMapeamento.cs" />
@@ -70,13 +78,24 @@
     <Compile Include="Migrations\201812031711145_AtribuirUniqueEmaileUF.Designer.cs">
       <DependentUpon>201812031711145_AtribuirUniqueEmaileUF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812161126564_AdicionadaTabelaCalculadora.cs" />
+    <Compile Include="Migrations\201812161126564_AdicionadaTabelaCalculadora.Designer.cs">
+      <DependentUpon>201812161126564_AdicionadaTabelaCalculadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812162056258_AdicionadaQuantidadeDoProduto.cs" />
+    <Compile Include="Migrations\201812162056258_AdicionadaQuantidadeDoProduto.Designer.cs">
+      <DependentUpon>201812162056258_AdicionadaQuantidadeDoProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\DepartamentoRepositorio.cs" />
     <Compile Include="Repositorios\MunicipioRepositorio.cs" />
+    <Compile Include="Repositorios\PedidoRepositorio.cs" />
     <Compile Include="Repositorios\PessoaRepositorio.cs" />
+    <Compile Include="Repositorios\ProdutoRepositorio.cs" />
     <Compile Include="Repositorios\UFRepositorio.cs" />
     <Compile Include="_Base\RepositorioBase.cs" />
+    <Compile Include="_Base\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LojaVirtual.BLL\LojaVirtual.BLL.csproj">
@@ -101,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812031711145_AtribuirUniqueEmaileUF.resx">
       <DependentUpon>201812031711145_AtribuirUniqueEmaileUF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812161126564_AdicionadaTabelaCalculadora.resx">
+      <DependentUpon>201812161126564_AdicionadaTabelaCalculadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812162056258_AdicionadaQuantidadeDoProduto.resx">
+      <DependentUpon>201812162056258_AdicionadaQuantidadeDoProduto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

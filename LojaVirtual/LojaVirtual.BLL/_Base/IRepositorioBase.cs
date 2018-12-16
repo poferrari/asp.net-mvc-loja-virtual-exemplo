@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LojaVirtual.BLL._Base
@@ -10,6 +11,7 @@ namespace LojaVirtual.BLL._Base
         TEntity Find(params object[] key);
         void Atualizar(TEntity obj);
         void SalvarTodos();
+        IEnumerable<string> ObterErros();
         void Adicionar(TEntity obj);
         void Excluir(Func<TEntity, bool> predicate);
     }

@@ -1,4 +1,5 @@
-﻿using LojaVirtual.BLL.Departamentos;
+﻿using LojaVirtual.BLL.Calculadora;
+using LojaVirtual.BLL.Departamentos;
 using LojaVirtual.BLL.Municipios;
 using LojaVirtual.BLL.Pedidos;
 using LojaVirtual.BLL.Pessoas;
@@ -23,7 +24,7 @@ namespace LojaVirtual.DAL.Contexto
         }
 
         private void IniciarContexto()
-        {            
+        {
             Database.SetInitializer(new CreateDatabaseIfNotExists<LojaVirtualContexto>());
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<LojaVirtualContexto, Configuration>());
 
@@ -47,8 +48,11 @@ namespace LojaVirtual.DAL.Contexto
         public DbSet<ImagemDoProduto> ImagensDoProduto { get; set; }
         public DbSet<DepartamentoDoProduto> DepartamentosDoProduto { get; set; }
 
+
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<ItemDoPedido> ItensDoPedido { get; set; }
+
+        public DbSet<Calculadora> Calculadoras { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -70,6 +74,8 @@ namespace LojaVirtual.DAL.Contexto
 
             modelBuilder.Configurations.Add(new PedidoMapeamento());
             modelBuilder.Configurations.Add(new ItemDoPedidoMapeamento());
+
+            modelBuilder.Configurations.Add(new CalculadoraMapeamento());
 
             base.OnModelCreating(modelBuilder);
         }

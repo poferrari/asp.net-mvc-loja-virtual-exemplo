@@ -16,7 +16,23 @@ namespace LojaVirtual.BLL.Pedidos
         public decimal Frete { get; private set; }
         public decimal ValorTotal { get; private set; }
 
+        public Pedido(int pessoaId, decimal subTotal, decimal desconto, decimal frete, decimal valorTotal)
+        {
+            PessoaId = pessoaId;
+            SubTotal = subTotal;
+            Desconto = desconto;
+            Frete = frete;
+            ValorTotal = valorTotal;
+            DataDeCadastro = DateTime.Now;
+            SituacaoDoPedido = ESituacaoDoPedido.AguardandoPagamento;
+        }
+
         public virtual Pessoa Pessoa { get; private set; }
-        public virtual ICollection<ItemDoPedido> Itens { get; private set; }
+        public virtual ICollection<ItemDoPedido> Itens { get; private set; } = new List<ItemDoPedido>();
+
+        public void AdicionarItemDoPedido(ItemDoPedido item)
+        {
+            Itens.Add(item);
+        }
     }
 }

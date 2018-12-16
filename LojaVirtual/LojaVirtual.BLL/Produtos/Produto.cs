@@ -13,6 +13,12 @@ namespace LojaVirtual.BLL.Produtos
         public DateTime DataDeCadastro { get; private set; }
         public bool Removido { get; private set; }
         public string SKU { get; private set; }
+        public int Quantidade { get; private set; }
+
+        public void AlterarQuantidade(int quantidade)
+        {
+            Quantidade = quantidade;
+        }
 
         public virtual ICollection<DepartamentoDoProduto> Departamentos { get; private set; }
         public virtual ICollection<ImagemDoProduto> Imagens { get; private set; }
