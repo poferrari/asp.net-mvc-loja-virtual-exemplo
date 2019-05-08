@@ -1,10 +1,11 @@
-﻿using LojaVirtual.DAL.Contexto;
+﻿using LojaVirtual.BLL._Base;
+using LojaVirtual.DAL.Contexto;
 using System;
 using System.Data.Entity;
 
 namespace LojaVirtual.DAL._Base
 {
-    public class UnitOfWork: IDisposable
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly LojaVirtualContexto _contexto;
         private DbContextTransaction _transaction;
